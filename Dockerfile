@@ -18,7 +18,10 @@ RUN pip install --no-cache-dir --upgrade pip && \
 # Copiar código
 COPY . .
 
+# Copiar credenciales de Google (si existen)
+COPY credentials.json /app/credentials.json
+
 EXPOSE 8080
 
-# Puerto dinámico desde variable de entorno PORT (Cloud Run la inyecta automáticamente)
+# Puerto dinámico desde variable de entorno PORT
 CMD ["sh", "-c", "uvicorn app.main:app --host 0.0.0.0 --port ${PORT:-8080} --log-level debug"]
