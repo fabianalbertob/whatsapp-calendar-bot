@@ -1,0 +1,25 @@
+﻿fastapi==0.115.*
+uvicorn[standard]==0.30.*
+python-dotenv==1.0.*
+pydantic-settings==2.6.*
+
+# WhatsApp (obligatorio)
+pywa>=4.0.0
+
+# Database
+sqlalchemy==2.0.*
+alembic==1.13.*
+asyncpg==0.29.*
+psycopg2-binary==2.9.*
+
+# Google Calendar
+google-api-python-client==2.149.*
+google-auth-oauthlib==1.2.*
+google-auth-httplib2==0.2.*
+
+# Admin UI
+sqladmin==0.20.*
+
+# Otros
+structlog==24.*
+spacy==3.8.*
