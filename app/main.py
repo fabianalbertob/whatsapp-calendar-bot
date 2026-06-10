@@ -27,12 +27,12 @@ async def lifespan(app: FastAPI):
             await conn.run_sync(Base.metadata.create_all)
             logger.info("✅ Tablas creadas correctamente")
     except Exception as e:
-        logger.error(f"❌ Error al crear tablas: {e}")
+        logger.error(f" Error al crear tablas: {e}")
         raise
     
     logger.info("🚀 WhatsApp Bot iniciado correctamente")
     yield
-    logger.info("🛑 Cerrando aplicación...")
+    logger.info(" Cerrando aplicación...")
 
 app = FastAPI(title="WhatsApp Calendar Bot", lifespan=lifespan)
 logger.info("✅ FastAPI app creada")
